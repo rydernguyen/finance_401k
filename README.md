@@ -5,12 +5,10 @@ Follow the steps laid out in the <a href='https://medium.com/@rydernguyen/401k-t
 # Useful user defined functions to work with Google Sheets
 ## Update rows by converting dataframe to list of list and use values_update method
 def gsheets_update_rows(sheetname,df):
-    #Format list of list
     lst = []
     for i in df.itertuples():
         lst.append(list(i))
-
-    #Update rows
+    
     workbook.values_update(
         f'{sheetname}!A2',
         params={'valueInputOption': 'USER_ENTERED'},
