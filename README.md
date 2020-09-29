@@ -15,17 +15,17 @@ Follow the steps laid out in the <a href='https://medium.com/@rydernguyen/401k-t
             body={'values': lst})
 
 ## Update column names by using values_update method
-def gsheets_update_names(sheetname,lst):
-    workbook.values_update(
-    f'{sheetname}!A1',
-    params={'valueInputOption': 'USER_ENTERED'},
-    body={'values': [lst]})
+    def gsheets_update_names(sheetname,lst):
+        workbook.values_update(
+        f'{sheetname}!A1',
+        params={'valueInputOption': 'USER_ENTERED'},
+        body={'values': [lst]})
     
 # Useful BigQuery python commands
 ## Write to a BigQuery table
-pd.to_gbq('table_name',if_exists='param')
+    pd.to_gbq('table_name',if_exists='param')
 ## Read from a BigQuery table using legacy syntax
-pd.read_gbq(sql, dialect='legacy')
+    pd.read_gbq(sql, dialect='legacy')
 ## Run queries on BigQuery directly from Jupyter 
-query_job = bigquery_client.query("""[SQL CODE]""") <br>
-results = query_job.result()
+    query_job = bigquery_client.query("""[SQL CODE]""") <br>
+    results = query_job.result()
